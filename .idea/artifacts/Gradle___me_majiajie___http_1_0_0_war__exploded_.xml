@@ -1,0 +1,34 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : me.majiajie : http-1.0.0.war (exploded)">
+    <output-path>$PROJECT_DIR$/out/artifacts/http/exploded/http-1.0.0.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="http_main/web/Web Gradle : http-1.0.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="http_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/http/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.1.0.Final" />
+          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.0.Final" />
+          <element id="library" level="project" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Gradle: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Gradle: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" />
+          <element id="library" level="project" name="Gradle: org.jboss:jandex:2.0.0.Final" />
+          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.3.0" />
+          <element id="library" level="project" name="Gradle: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Gradle: xml-apis:xml-apis:1.0.b2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.38/dbbd7cd309ce167ec8367de4e41c63c2c8593cc5/mysql-connector-java-5.1.38.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/http/exploded/http-1.0.0.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
