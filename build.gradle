@@ -1,11 +1,23 @@
 
+
 allprojects{
     group 'me.majiajie'
     version '1.0.0'
-}
 
-subprojects{
-    repositories {
+    repositories{
         jcenter()
     }
 }
+
+subprojects{
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        testCompile 'junit:junit:4.11'
+    }
+}
+
