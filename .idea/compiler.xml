@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="db_main" target="1.8" />
+      <module name="db_test" target="1.8" />
       <module name="http_main" target="1.8" />
       <module name="http_test" target="1.8" />
       <module name="web_main" target="1.8" />
