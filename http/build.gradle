@@ -1,3 +1,7 @@
 
 apply plugin: 'war'
 apply plugin: 'idea'
+
+dependencies{
+    compile project(':db')
+}

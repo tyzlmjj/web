@@ -11,14 +11,14 @@
       <table id="2" parent="1" name="user"/>
       <column id="3" parent="2" name="id">
         <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
+        <data-type>int(11) unsigned</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="4" parent="2" name="username">
+      <column id="4" parent="2" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="5" parent="2" name="password">
+      <column id="5" parent="2" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>

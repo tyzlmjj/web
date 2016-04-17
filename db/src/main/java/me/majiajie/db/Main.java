@@ -1,7 +1,11 @@
+package me.majiajie.db;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.metadata.ClassMetadata;
 import org.hibernate.service.ServiceRegistry;
@@ -16,11 +20,13 @@ public class Main {
 
     static {
         try {
-            Configuration configuration = new Configuration();
-            configuration.configure();
 
-            serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-            ourSessionFactory = configuration.buildSessionFactory(serviceRegistry);
+            serviceRegistry = new StandardServiceRegistryBuilder()
+                    .configure()
+                    .build();
+            ourSessionFactory = new MetadataSources( serviceRegistry )
+                    .buildMetadata()
+                    .buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }

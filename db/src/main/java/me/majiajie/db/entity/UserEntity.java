@@ -1,22 +1,35 @@
-package me.majiajie.db;
+package me.majiajie.db.entity;
+
+
+import me.majiajie.db.address;
+
 
 import javax.persistence.*;
 
-/**
- * Created by MJJ on 2016/4/16.
- */
+
 @Entity
 @Table(name = "user", schema = "htest")
 public class UserEntity {
     private int id;
     private String username;
     private String password;
+    private address s;
+
+    public address getS() {
+        return s;
+    }
+
+    public void setS(address s) {
+        this.s = s;
+    }
+
 
     @Id
     @Column(name = "id")
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
