@@ -3,5 +3,6 @@ apply plugin: 'war'
 apply plugin: 'idea'
 
 dependencies{
-    compile project(':db')
+//    compile project(':db')
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
 }

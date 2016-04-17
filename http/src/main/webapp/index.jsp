@@ -13,6 +13,7 @@
 <body>
 <h1>HTTP Test</h1>
 <hr/>
+<a href="HostInfo">Host Info</a><br/>
 <a href="GetTest">GetTest</a>
 
 </body>
