@@ -2,6 +2,7 @@ package me.majaijie.db.test;
 
 import me.majiajie.db.entity.UserEntityAddress;
 import me.majiajie.db.entity.UserEntity;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -9,6 +10,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 import org.junit.*;
+
+import java.util.List;
 
 public class TestDB
 {
@@ -92,6 +95,20 @@ public class TestDB
     //-------结束 默认提供的四个方法save、get、update、delete--------------------------------------//
 
 
+    //--------HQL 开始--------------------------------------------------------------------------//
+    @Test
+    public void form()
+    {
+        String hql = "from UserEntity";
+        Query query = session.createQuery(hql);
+
+        List<UserEntity> userEntities = query.list();
+
+        for (UserEntity user:userEntities) {
+
+            System.out.println("userID"+user.getId());
+        }
+    }
 
 
 
