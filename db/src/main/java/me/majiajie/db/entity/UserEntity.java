@@ -1,9 +1,6 @@
 package me.majiajie.db.entity;
 
 
-import me.majiajie.db.address;
-
-
 import javax.persistence.*;
 
 
@@ -13,18 +10,19 @@ public class UserEntity {
     private int id;
     private String username;
     private String password;
-    private address s;
+    private UserEntityAddress address;
 
-    public address getS() {
-        return s;
+    public UserEntityAddress getAddress() {
+        return address;
     }
 
-    public void setS(address s) {
-        this.s = s;
+    public void setAddress(UserEntityAddress address) {
+        this.address = address;
     }
 
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;

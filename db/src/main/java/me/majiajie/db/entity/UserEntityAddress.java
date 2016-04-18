@@ -1,17 +1,16 @@
-package me.majiajie.db;
+package me.majiajie.db.entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import java.io.Serializable;
 
 
 @Embeddable
-public class address{
+public class UserEntityAddress {
 
     private String localtion;
 
-    private String host;
+    private int postcode;
 
     @Basic
     @Column(name = "localtion")
@@ -26,12 +25,12 @@ public class address{
 
 
     @Basic
-    @Column(name = "host")
-    public String getHost() {
-        return host;
+    @Column(name = "postcode")
+    public int getPostcode() {
+        return postcode;
     }
 
-    public void setHost(String host) {
-        this.host = host;
+    public void setPostcode(int postcode) {
+        this.postcode = postcode;
     }
 }

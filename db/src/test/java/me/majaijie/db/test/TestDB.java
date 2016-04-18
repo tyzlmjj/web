@@ -1,6 +1,6 @@
 package me.majaijie.db.test;
 
-import me.majiajie.db.address;
+import me.majiajie.db.entity.UserEntityAddress;
 import me.majiajie.db.entity.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -36,20 +36,6 @@ public class TestDB
 
     }
 
-    @Test
-    public void saveUser()
-    {
-        UserEntity userEntity = new UserEntity();
-        address a = new address();
-        a.setHost("akk");
-        a.setLocaltion("hz");
-        userEntity.setS(a);
-        userEntity.setPassword("22222");
-        userEntity.setUsername("lw");
-
-        session.save(userEntity);
-    }
-
     @After
     public void destory()
     {
@@ -57,6 +43,57 @@ public class TestDB
         session.close();
         sessionFactory.close();
     }
+
+    //-------默认提供的四个方法save、get、update、delete--------------------------------------//
+
+    @Test
+    public void saveUser()
+    {
+        UserEntity userEntity = new UserEntity();
+        UserEntityAddress address = new UserEntityAddress();
+        address.setPostcode(311200);
+        address.setLocaltion("hz");
+        userEntity.setAddress(address);
+        userEntity.setPassword("22222");
+        userEntity.setUsername("lw");
+
+        session.save(userEntity);
+    }
+
+
+    @Test
+    public void getUser()
+    {
+        UserEntity userEntity =  session.get(UserEntity.class,2);
+        System.out.println("id:"+userEntity.getId());
+        System.out.println("username:"+userEntity.getUsername());
+        System.out.println("password:"+userEntity.getPassword());
+        System.out.println("postcode:"+userEntity.getAddress().getPostcode());
+        System.out.println("localtion:"+userEntity.getAddress().getLocaltion());
+    }
+
+    @Test
+    public void updateUser()
+    {
+        UserEntity userEntity =  session.get(UserEntity.class,2);
+        userEntity.setPassword("aasdasdasd");
+        session.update(userEntity);
+    }
+
+    @Test
+    public void deleteUser()
+    {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(2);
+        session.delete(userEntity);
+    }
+
+
+    //-------结束 默认提供的四个方法save、get、update、delete--------------------------------------//
+
+
+
+    
 
 
 
