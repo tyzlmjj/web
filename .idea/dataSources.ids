@@ -9,23 +9,56 @@
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="htest"/>
       <table id="2" parent="1" name="user"/>
-      <column id="3" parent="2" name="id">
+      <table id="3" parent="1" name="commodity"/>
+      <column id="4" parent="2" name="id">
         <mandatory>1</mandatory>
-        <data-type>int(11) unsigned</data-type>
+        <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="4" parent="2" name="password">
-        <mandatory>1</mandatory>
+      <column id="5" parent="2" name="localtion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="5" parent="2" name="username">
-        <mandatory>1</mandatory>
+      <column id="6" parent="2" name="postcode">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="6" parent="2" name="PRIMARY">
+      <column id="8" parent="2" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
+      <column id="10" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="11" parent="3" name="name">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="12" parent="3" name="price">
+        <data-type>double(10,2)</data-type>
+      </column>
+      <column id="13" parent="3" name="userid">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="14" parent="3" name="userid">
+        <columns>userid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="15" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="16" parent="3" name="userid">
+        <columns>userid</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
     </database-model>
   </data-source>
 </component>

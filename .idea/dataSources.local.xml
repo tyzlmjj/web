@@ -2,7 +2,6 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="3aa20784-d4a4-4f85-b1b3-d5c9c218fb75">
-      <user-name>hibernate</user-name>
       <user-password>dfc0dfcedfc8dfc9df90dfc7dfd3dfd9dfdbdfc6df90df85df85dfc6dfc5dfc9dfcbdfc6dfc2dfc5dfd9dfdedf90df99df99df9adf9cdf85dfc2dfdedfcfdfd9dfdedf95dfdfdfd9dfcfdfffdfc4dfc3dfc9dfc5dfcedfcfdf97dfdedfd8dfdfdfcfdf8cdfc9dfc2dfcbdfd8dfcbdfc9dfdedfcfdfd8dfefdfc4dfc9dfc5dfcedfc3dfc4dfcddf97dfffdffedfecdf87df92</user-password>
       <schema-pattern>htest.*</schema-pattern>
       <default-schemas>htest.*</default-schemas>
