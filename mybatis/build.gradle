@@ -1,0 +1,6 @@
+apply plugin: 'idea'
+
+dependencies {
+    compile 'mysql:mysql-connector-java:5.1.38'
+    compile 'org.mybatis:mybatis:3.4.0'
+}

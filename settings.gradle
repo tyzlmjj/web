@@ -1,3 +1,5 @@
 rootProject.name = 'web'
 include 'http'
-include 'db'
+include 'hibernate'
+include 'mybatis'
+

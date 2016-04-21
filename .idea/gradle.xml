@@ -11,8 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/db" />
+            <option value="$PROJECT_DIR$/hibernate" />
             <option value="$PROJECT_DIR$/http" />
+            <option value="$PROJECT_DIR$/mybatis" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
