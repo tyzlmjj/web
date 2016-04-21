@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config.properties"/>
+    <!--类型别名，可以设置JavaBean别名或者直接引入包-->
+    <typeAliases>
+        <package name="me.majiajie.db.entity"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${MyBatis.driver}"/>
+                <property name="url" value="${MyBatis.url}"/>
+                <property name="username" value="${MyBatis.username}"/>
+                <property name="password" value="${MyBatis.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="entity/user.xml"/>
+    </mappers>
+
+</configuration>
