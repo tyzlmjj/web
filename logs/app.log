@@ -1,0 +1,8 @@
+2016.04.22 at 15:40:35 CST TRACE me.majiajie.log4j2.Test 12 doIt - entry
+2016.04.22 at 15:40:35 CST ERROR me.majiajie.log4j2.Test 13 doIt - Did it again!
+2016.04.22 at 15:40:35 CST TRACE me.majiajie.log4j2.Test 14 doIt - exit with(false)
+2016.04.22 at 15:40:35 CST ERROR me.majiajie.log4j2.Main$1 20 run - Didn't do it.
+2016.04.22 at 15:43:21 CST TRACE me.majiajie.log4j2.Test 12 doIt - entry
+2016.04.22 at 15:43:21 CST ERROR me.majiajie.log4j2.Test 13 doIt - Did it again!
+2016.04.22 at 15:43:21 CST TRACE me.majiajie.log4j2.Test 14 doIt - exit with(false)
+2016.04.22 at 15:43:21 CST ERROR me.majiajie.log4j2.Main$1 20 run - Didn't do it.

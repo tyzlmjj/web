@@ -2,4 +2,4 @@ rootProject.name = 'web'
 include 'http'
 include 'hibernate'
 include 'mybatis'
-
+include 'log4j2'
