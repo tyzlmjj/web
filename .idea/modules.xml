@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/db/db.iml" filepath="$PROJECT_DIR$/.idea/modules/db/db.iml" group="db" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/db/db_main.iml" filepath="$PROJECT_DIR$/.idea/modules/db/db_main.iml" group="db" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/db/db_test.iml" filepath="$PROJECT_DIR$/.idea/modules/db/db_test.iml" group="db" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate.iml" group="hibernate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate.iml" group="hibernate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate_main.iml" group="hibernate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate_main.iml" group="hibernate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate_test.iml" group="hibernate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hibernate/hibernate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hibernate/hibernate_test.iml" group="hibernate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/http/http.iml" filepath="$PROJECT_DIR$/.idea/modules/http/http.iml" group="http" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/http/http_main.iml" filepath="$PROJECT_DIR$/.idea/modules/http/http_main.iml" group="http" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/http/http_test.iml" filepath="$PROJECT_DIR$/.idea/modules/http/http_test.iml" group="http" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2.iml" group="log4j2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2.iml" group="log4j2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2_main.iml" group="log4j2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2_main.iml" group="log4j2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2_test.iml" group="log4j2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/log4j2/log4j2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/log4j2/log4j2_test.iml" group="log4j2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis.iml" group="mybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis.iml" group="mybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis_main.iml" group="mybatis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis_main.iml" group="mybatis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis_test.iml" group="mybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis/mybatis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis/mybatis_test.iml" group="mybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/web.iml" filepath="$PROJECT_DIR$/.idea/modules/web.iml" />
     </modules>

@@ -13,15 +13,12 @@ import java.util.ResourceBundle;
 
 public class Main
 {
-    private static final Logger logger = LogManager.getLogger(Main.class);
-
     private static ResourceBundle resourceBundle;
 
     private static SqlSessionFactory sqlSessionFactory;
 
     static
     {
-        logger.entry();
         resourceBundle = ResourceBundle.getBundle("config");
         String resource = "mybatis-confi.xml";
         try {
@@ -30,9 +27,7 @@ public class Main
 
         } catch (IOException e) {
             e.printStackTrace();
-            logger.error("MyBatis配置文件未找到:"+e.getMessage());
         }
-        logger.exit();
     }
 
     public static SqlSessionFactory getSqlSessionFactory() {
