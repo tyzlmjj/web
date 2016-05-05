@@ -14,13 +14,11 @@
           <element id="file-copy" path="$PROJECT_DIR$/http/libs/servlet-api.jar" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-web:2.5" />
           <element id="library" level="project" name="Gradle: com.squareup.okhttp3:okhttp:3.2.0" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.5" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.5" />
           <element id="library" level="project" name="Gradle: com.squareup.okio:okio:1.6.0" />
-          <element id="file-copy" path="$PROJECT_DIR$/http/libs/jasper-el.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/http/libs/jasper.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-web/2.5/73871421ea7ee80fd633cf9ea588ecce2cc3f6cb/log4j-web-2.5.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.5/e7fd981408caba8a0c0fb276413562468d260160/log4j-api-2.5.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.5/7ed845de1dfe070d43511fab321784e6c4118398/log4j-core-2.5.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

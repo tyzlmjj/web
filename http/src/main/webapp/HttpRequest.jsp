@@ -59,6 +59,7 @@
     {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
+                .post(RequestBody.create(mediaType,""))
                 .url(url)
                 .build();
         Response response = null;

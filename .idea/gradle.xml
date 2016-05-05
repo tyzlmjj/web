@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/http" />
             <option value="$PROJECT_DIR$/log4j2" />
             <option value="$PROJECT_DIR$/mybatis" />
+            <option value="$PROJECT_DIR$/okhttp" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

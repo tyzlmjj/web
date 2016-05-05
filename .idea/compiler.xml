@@ -29,6 +29,8 @@
       <module name="log4j2_test" target="1.8" />
       <module name="mybatis_main" target="1.8" />
       <module name="mybatis_test" target="1.8" />
+      <module name="okhttp_main" target="1.8" />
+      <module name="okhttp_test" target="1.8" />
       <module name="web_main" target="1.8" />
       <module name="web_test" target="1.8" />
     </bytecodeTargetLevel>
