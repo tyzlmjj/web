@@ -1,6 +1,8 @@
 package me.majiajie.http;
 
 
+import me.majiajie.http.utils.ServletUtil;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +16,11 @@ public class GetTest extends HttpServlet
 {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Test test = ServletUtil.toModel(req,Test.class);
+
         resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().append("GetTest");
-        File file = new File("");
-        resp.getWriter().append(file.getAbsolutePath());
+        resp.getWriter().append("GetTest<br/>");
+        resp.getWriter().append(test.getId()+"");
     }
 }

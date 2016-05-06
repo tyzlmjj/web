@@ -1,11 +1,17 @@
 import com.google.gson.Gson;
 import me.majiajie.okhttp.Main;
 import me.majiajie.okhttp.Student;
+import me.majiajie.okhttp.f.OkHttpCallBack;
+import me.majiajie.okhttp.f.OkHttpUtil;
+import okhttp3.Call;
+import okhttp3.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class TestOkhttp
@@ -60,12 +66,22 @@ public class TestOkhttp
     @Test
     public void OkhttpTest()
     {
-//        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-//        builder.connectTimeout(3000, TimeUnit.MILLISECONDS);
-//        builder.readTimeout(3000, TimeUnit.MILLISECONDS);
+        Map<String,String> map = new HashMap<>();
+        map.put("name","OkHttp");
 
-//        OkHttpUtil.okHttpClient
-//        System.out.println(OkHttpUtil.okHttpClient == null);
+        OkHttpUtil.doPost("https://localhost:8443/http/PostTest", map, new OkHttpCallBack() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                super.onFailure(call, e);
+                System.out.println("onFailure:"+e.getMessage());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                super.onResponse(call, response);
+                System.out.println("body:"+response.body().string());
+            }
+        });
     }
 
 

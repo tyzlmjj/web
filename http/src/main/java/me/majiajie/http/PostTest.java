@@ -22,8 +22,10 @@ public class PostTest extends HttpServlet
 
     void init(HttpServletRequest req, HttpServletResponse resp) throws IOException
     {
+        String name = req.getParameter("name");
+
         resp.setHeader("content","application/json;charset=utf-8");
         resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().append("{\"id\":2,\"name\":\"大白\"}");
+        resp.getWriter().append("{\"id\":2,\"name\":\""+name+"\"}");
     }
 }
