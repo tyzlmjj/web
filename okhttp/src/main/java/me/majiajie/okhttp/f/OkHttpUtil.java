@@ -2,16 +2,15 @@ package me.majiajie.okhttp.f;
 
 import okhttp3.*;
 
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.*;
 import java.io.*;
 import java.net.URLEncoder;
 import java.security.KeyStore;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
+import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
 
 /**
  * OkHttp工具类<p>
@@ -37,7 +36,7 @@ public class OkHttpUtil
     {
         SSLContext  sslContext = null;
         try {
-            sslContext = setCertificates(new FileInputStream("E:\\github\\web\\okhttp\\src\\main\\resources\\server.cer"));
+            sslContext = setCertificates(new FileInputStream("C:\\Users\\MJJ\\Desktop\\Github\\web\\okhttp\\src\\main\\resources\\server.cer"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -60,7 +59,7 @@ public class OkHttpUtil
 
     }
 
-    public static void doPost(String url,Map<String,String> bodyParams, OkHttpCallBack callback)
+    public static void doPost(String url, Map<String,String> bodyParams, OkHttpCallBack callback)
     {
         buildPostRequest(url,bodyParams,callback);
     }
@@ -117,34 +116,56 @@ public class OkHttpUtil
      * @param certificates
      * @return
      */
-    private static SSLContext setCertificates(InputStream... certificates)
+    private static SSLContext setCertificates(InputStream certificates)
     {
         SSLContext sslContext = null;
         try
         {
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
-            KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
-            keyStore.load(null);
-            int index = 0;
-            for (InputStream certificate : certificates)
-            {
-                String certificateAlias = Integer.toString(index++);
-                keyStore.setCertificateEntry(certificateAlias, certificateFactory.generateCertificate(certificate));
 
-                if (certificate != null){
-                    certificate.close();
-                }
+            Certificate ca;
+            try {
+                ca = certificateFactory.generateCertificate(certificates);
+//                System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+            } finally {
+                certificates.close();
             }
 
-            SSLContext.getInstance("TLS");
+            // Create a KeyStore containing our trusted CAs
+            String keyStoreType = KeyStore.getDefaultType();
+            KeyStore keyStore = KeyStore.getInstance(keyStoreType);
+            keyStore.load(null, null);
+            keyStore.setCertificateEntry("ca", ca);
 
-            TrustManagerFactory trustManagerFactory =
-                    TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+            // Create a TrustManager that trusts the CAs in our KeyStore
+            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
+            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
+            tmf.init(keyStore);
 
-            trustManagerFactory.init(keyStore);
-
-            sslContext.init(null,trustManagerFactory.getTrustManagers(),new SecureRandom());
-
+            // Create an SSLContext that uses our TrustManager
+            sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, tmf.getTrustManagers(), null);
+//            KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+//            keyStore.load(null);
+//            int index = 0;
+//            for (InputStream certificate : certificates)
+//            {
+//                String certificateAlias = Integer.toString(index++);
+//                keyStore.setCertificateEntry(certificateAlias, certificateFactory.generateCertificate(certificate));
+//
+//                if (certificate != null){
+//                    certificate.close();
+//                }
+//            }
+//
+//            SSLContext.getInstance("TLS");
+//
+//            TrustManagerFactory trustManagerFactory =
+//                    TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+//
+//            trustManagerFactory.init(keyStore);
+//
+//            sslContext.init(null,trustManagerFactory.getTrustManagers(),new SecureRandom());
         } catch (Exception e)
         {
             e.printStackTrace();
